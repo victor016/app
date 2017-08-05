@@ -1,0 +1,31 @@
+extends ../../ilayout.jade
+
+block contenido_
+ 
+ form(action='/app/socio', method="POST",  class="form-horizontal")
+  h1 Ingresar Socio
+  div(class="col-md-8 remove-float center-block ")
+   div(class="form-group") 
+    label(for="id" class="col-sm-2 control-label") Id Socio
+    div(class="col-sm-3")
+     input(type="text", name ="id_socio", placeholder="Id Socio", id="id_socio", class="form-control")
+   div(class="form-group") 	 	
+    label(for="numsocio" class="col-sm-2 control-label") Numero Socio
+    div(class="col-sm-3")
+     input(type="text", name ="numsocio", placeholder="Numero socio", id="numsocio",  class="form-control")
+   div(class="form-group")    
+    label(for="nombresocio" class="col-sm-2 control-label") Nombre 
+    div(class="col-sm-3")
+     input(type="text", name ="nombresocio", placeholder="nombre socio", id="nombresocio",  class="form-control")
+   div(class="form-group")    
+    label(for="apellidosocio" class="col-sm-2 control-label") Apellido socio
+    div(class="col-sm-3")
+     input(type="text", name ="apellidosocio", placeholder="Apelldi socio", id="apellidosocio",  class="form-control")
+   div(class="form-group")    
+    label(for="DNI" class="col-sm-2 control-label") RUC/CEDULA
+    div(class="col-sm-3")
+     input(type="text", name ="DNI", placeholder="Cedula/ RUC", id="DNI",  class="form-control")
+   div(class="form-group")
+    div(class="col-sm-offset-2 col-sm-5")
+     input(type="submit", value ="Guardar", id="btnsave",  class="btn btn-primary")
+

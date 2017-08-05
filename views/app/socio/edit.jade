@@ -1,0 +1,61 @@
+extends ../../ilayout.jade
+
+block contenido_
+ 
+ form(action='/app/socio', method="POST",  class="form-horizontal")
+  input(type="hidden", value="PUT", name="_method")
+  h1 Editar Socio
+  div(class="col-md-8 remove-float center-block ")
+   div(class="form-group") 
+    label(for="id" class="col-sm-2 control-label") Id Socio
+    div(class="col-sm-3")
+     input(type="text", name ="id_socio", value="#{socio.id_socio}" placeholder="Id Socio", id="id_socio", class="form-control")
+   div(class="form-group") 	 	
+    label(for="numsocio" class="col-sm-2 control-label") Numero Socio
+    div(class="col-sm-3")
+     input(type="text", name ="numsocio",  value="#{socio.nrosocio}", placeholder="Numero socio", id="numsocio",  class="form-control")
+   div(class="form-group")    
+    label(for="nombresocio" class="col-sm-2 control-label") Nombre 
+    div(class="col-sm-3")
+     input(type="text", name ="nombresocio", value="#{socio.nombre}", placeholder="nombre socio", id="nombresocio",  class="form-control")
+   div(class="form-group")    
+    label(for="apellidosocio" class="col-sm-2 control-label") Apellido socio
+    div(class="col-sm-3")
+     input(type="text", name ="apellidosocio", value="#{socio.apelllido}",placeholder="Apelldi socio", id="apellidosocio",  class="form-control")
+   div(class="form-group")    
+    label(for="DNI" class="col-sm-2 control-label") RUC/CEDULA
+    div(class="col-sm-3")
+     input(type="text", name ="DNI", value="#{socio.dni}", placeholder="Cedula/ RUC", id="DNI",  class="form-control")
+   div(class="form-group")
+    div(class="col-sm-offset-2 col-sm-5")
+     input(type="submit", value ="Guardar", id="btnsave",  class="btn btn-primary")
+ 
+ div(class="row")
+ h1 Cuotas
+ .white.border.tr.large-padding
+  .row
+   .col-md-2
+    label Numero
+   .col-md-3
+    label Fecha de emision
+   .col-md-2
+    label Importe
+   .col-md-2
+    label Fecha Pago
+   .col-md-2
+ for couta in socio.cuotas
+  .white.border.tr.large-padding
+   .row
+    .col-md-2
+     label=couta.nrocouta
+    .col-md-3
+     label=couta.fechaemision
+    .col-md-2
+     label=couta.importe
+    .col-md-2
+     label=couta.fechapago
+    .col-md-2
+     a(href="/app/socio/#{socio._id}/edit" , class="right-space") Editar
+     a(href="/app/socio/#{socio._id}/") eliminar
+
+

@@ -1,0 +1,38 @@
+.right-space{
+	margin-right: 1em;
+}
+
+.remove-fload{
+	float:none;
+}
+
+.big-top-space{
+	margin-top: 200px;
+}
+
+.large-padding {
+	padding:10px 15px;
+
+}
+
+.black{
+	background-color: #222;
+}
+
+.white-text{
+	color: white;
+}
+nav{
+	text-align: right;
+}
+nav li{
+	display: inline-block;
+	margin-right: : 1em;
+}
+nav li a {
+	color: #fff;
+}
+
+.tr:nth-of-type(odd){
+ background-color: #eee;
+}

@@ -1,0 +1,32 @@
+extends ../../ilayout.jade
+block contenido_
+ h2 Listado de Socios
+ br
+ a(href="/app/socio/new" , class="btn btn-success") Nuevo Socio
+ br
+ div(class="container")
+  .col-md-2 
+   h5 No
+  .col-md-3
+   h5 nombre
+  .col-md-2
+   h5 apelllido
+  .col-md-2
+   h5 dni
+  .col-md-2
+   h5 Accion
+  for socio in socios
+   .white.border.tr.large-padding
+    .row
+     .col-md-2
+      label=socio.nrosocio
+     .col-md-3
+      label=socio.nombre
+     .col-md-2
+      label=socio.apelllido
+     .col-md-2
+      label=socio.dni
+     .col-md-2
+      a(href="/app/socio/#{socio._id}/edit" , class="right-space") Editar
+      a(href="/app/socio/#{socio._id}/") eliminar
+ 
